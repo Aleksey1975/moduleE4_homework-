@@ -1,7 +1,7 @@
 class ElDevice {
     constructor(name, weight, power) {
             this.name = name,
-            this.on = false, 
+            this.on = false,
             this.weight = weight,
             this.power = power,
             this.getStatus = function (on){
@@ -20,7 +20,7 @@ class ElDevice {
     }
 }
 
-const tv = new ElDevice("Sony", 10, 5)
+const tv = new ElDevice("sony", 20, 5)
 tv.channels = [1, 1, 2, 3, 4]
 tv.showChannel = function (channel){
     if(this.on && channel in this.channels) {
@@ -35,7 +35,7 @@ tv.turnOff()
 tv.getStatus()
 
 
-const microwave = new ElDevice("LG", 11, 50)
+const microwave = new ElDevice("lg", 10, 30)
 microwave.color = 'white'
 microwave.food = false
 microwave.cook = function (){
