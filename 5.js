@@ -1,4 +1,4 @@
-class ElDevice2 {
+class ElDevice {
     constructor(name, weight, power) {
         this.name = name
         this.on = false,
@@ -20,34 +20,34 @@ class ElDevice2 {
     }
 }
 
-const tv2 = new ElDevice2("Sony", 10, 5)
-tv2.channels = [1, 1, 2, 3, 4]
-tv2.showChannel = function (channel){
+const tv = new ElDevice("Sony", 10, 5)
+tv.channels = [1, 1, 2, 3, 4]
+tv.showChannel = function (channel){
     if(this.on && channel in this.channels) {
         console.log(`Show channel ${this.channels[channel]}`)
     }
 }
 
-tv2.turnOn()
-tv2.getStatus()
-tv2.showChannel(1)
-tv2.turnOff()
-tv2.getStatus()
+tv.turnOn()
+tv.getStatus()
+tv.showChannel(1)
+tv.turnOff()
+tv.getStatus()
 
 
-const microwave2 = new ElDevice2("LG", 11, 50)
-microwave2.color = 'white'
-microwave2.food = false
-microwave2.cook = function (){
+const microwave = new ElDevice("LG", 11, 50)
+microwave.color = 'white'
+microwave.food = false
+microwave.cook = function (){
     if(this.on && this.food){
         console.log('Cook a meal')
     }
 }
 
 
-console.log(microwave2.color)
-microwave2.turnOn()
-microwave2.food = true
-microwave2.cook()
+console.log(microwave.color)
+microwave.turnOn()
+microwave.food = true
+microwave.cook()
 
 
