@@ -1,10 +1,10 @@
 class ElDevice {
     constructor(name, weight, power) {
-        this.name = name
-        this.on = false,
+            this.name = name,
+            this.on = false, 
             this.weight = weight,
-            this.power = power
-        this.getStatus = function (on){
+            this.power = power,
+            this.getStatus = function (on){
             if (this.on) {
                 console.log(`This ${name} is turned on`)
             } else {
